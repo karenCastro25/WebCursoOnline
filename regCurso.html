@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Cursos Online</title>
+</head>
+<body class="body">
+    <header class="menu">
+        <h1>Cursos Online</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="#">Registrarse en curso</a></li>
+                <li><a href="./miscursos.html">Mis Cursos</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li> 
+                <li><a href="#" id="sesion">Cerrar sesión</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <div id="contenedorCarga">
+        <div id="carga"></div>
+    </div>
+    <div class="contenedorReserva">
+    <div class="FormRegistro">
+        <form id="RegistraCurso">
+            <h2 class="titulo">Regístrese en nuestros nuevos cursos</h2>
+            <h3>Datos del niñ@:</h3>
+            <div class="DatosPadre">
+                <p class="celdaDatoL">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" class="inputReser" id="nombres" name="nombres" required>
+                    <small class="Error" id="ErrorVnombre">El nombre no debe contener ningun caracter especial y Max.50</small>
+                </p>
+                <p class="celdaDatoR">
+                    <label for="apellidos">Apellidos: </label>
+                    <input type="text" class="inputReser" id="apellidos" name="apellidos" required>
+                    <small class="Error" id="ErrorVapellido">El apellido no debe contener ningun caracter especial y Max.50</small>
+                </p>
+                <p class="celdaDatoL">
+                    <label for="cedula">Cédula: </label>
+                    <input type="number" class="inputReser" id="cedula" name="cedula" required>
+                    <small class="Error" id="ErrorVcedula">la cédula no debe contener ningun caracter especial y solo 10 digitos</small>
+                </p>
+                <p class="celdaDatoR">
+                    <label for="edad">Edad: </label>
+                    <input type="number" class="inputReser" id="edad" name="edad" required>
+                    <small class="Error" id="ErrorVedad">la edad, numeros enteros positivos, no debe contener ningun caracter especial y Max.150 años</small>
+                </p>
+                <p class="celdaDatoL">
+                    <label for="genero">Género:</label>
+                    <input type="radio" id="sexo" name="genero" value="masculino"> Masculino
+                    <input type="radio" id="sexo" name="genero" value="femenino"> Femenino
+                </p>
+                <p class="celdaDatoR">
+                    <label for="telefono">Teléfono: </label>
+                    <input type="number" class="inputReser" id="telefono" name="telefono" required>
+                    <small class="Error" id="ErrorVtelefono">El teléfono no debe contener ningun caracter especial y Max.10</small>
+                </p>
+            
+            </div>
+             <div class=""> 
+                <h3>Datos del curso:</h3>
+                <p class="celdaDatoL"><label for="curso" class="labelRegistro">Cursos disponibles:</label>
+                    <select name="curso" id="curso" class="inputReserC">
+                        <option value="Ajedrez">Ajedrez</option>
+                        <option value="Guitarra">Guitarra</option>
+                        <option value="Piano">Piano</option>
+                        <option value="Dibujo">Dibujo</option>
+                        <option value="Matemáticas 1ro. de Primaria">Matemáticas 1ro. de Primaria</option>
+                        <option value="Matemáticas 2ro. de Primaria">Matemáticas 2do. de Primaria</option>
+                        <option value="Matemáticas 6to. de Primaria">Matemáticas 6to. de Primaria</option>
+                        <option value="Español 4to. de Primaria">Español 4to. de Primaria</option>
+                        <option value="Ciencias Naturales 4to. de Primaria">Ciencias Naturales 4to. de Primaria</option>
+                        <option value="Lectura y redacción">Lectura y redacción</option>
+                    </select>
+                </p>
+              
+                <p class="celdaDatoL">
+                    <label for="horaI" class="labelRegistro">Inicio de horas disponibles:</label>
+                    <input type="time" class="inputReserC" name="horaI" id="horaI" required>
+                </p>
+                <p class="celdaDatoL">
+                    <label for="horaF" class="labelRegistro">Fin de horas disponibles:</label>
+                    <input type="time" class="inputReserC" name="horaF" id="horaF" required>
+                </p>
+
+            </div>
+            
+            <button type="submit" class="boton">Registrar</button>
+        </form>
+    </div>
+    </div>
+    <footer>
+        <div class="footerContenido">
+            <h3>Cursos Online</h3>
+            <P>Los mejores cursos.</br>
+                (+593) 088 888 888</P>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
+        </div>
+        <div class="footerCopy">
+            <p>Diseñado por Karen Castro Demera & Ronny Forty Palma</p>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+<script src="js/registrarCurso.js" ></script>
+</html>

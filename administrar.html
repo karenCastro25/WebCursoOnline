@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Cursos Online</title>
+</head>
+<body class="body">
+    <header class="menu">
+        <h1>Cursos Online</h1>
+        <nav>
+            <ul>
+                <li><a href="./consulta.html">Consulta</a></li>
+                <li><a href="#">Administración</a></li>
+                <li><a href="#" id="sesion">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="ContenidoAdministrador">
+    <div class="FormRegistro">
+        <div class="cabecera">
+            <h1>Cursos Aprobados</h1>
+            <form id="BusquedaRegistro2" class="BusquedaRegistro2">
+                <p class="ConBusqueda">
+                    <input type="search" id="Busqueda" name="busqueda" placeholder="Buscar">
+                    <select name="busquedaPor" id="busquedaPor">
+                        <option value="cedula">Cedula</option>
+                        <option value="nombres">Nombres</option>
+                        <option value="apellidos">Apellidos</option>
+                        <option value="curso">Curso</option>                
+                    </select>
+                    <button type="submit" ><ion-icon name="search"></ion-icon></button>
+                </p>
+            </form>
+        </div>
+        <div class="eldivtable">
+        <table id='CitasContenedor'>
+            <thead>
+                <tr>
+                    <th>Cédula</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Curso</th>
+                    <th>Teléfono</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="BodyRegistros"></tbody>
+        </table>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+<script src="js/cursos.js" ></script>
+</html>

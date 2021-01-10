@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Cursos Online</title>
+</head>
+<body class="body">
+    <header class="menu">
+        <h1>Cursos Online</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./regCurso.html">Registrarse en curso</a></li>
+                <li><a href="#">Mis Cursos</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li> 
+                <li><a href="#" id="sesion">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="contenedorCarga">
+        <div id="carga"></div>
+    </div>
+    <div class="FormRegistro">
+        <div class="eldivtable">
+        <table id='CitasContenedor'>
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Edad</th>
+                    <th>Sexo</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="BodyCurso"></tbody>
+        </table>
+        </div>
+    </div>
+    <div class="ventanaModal" id="ventanaModal"> 
+        <div class="modal">
+            <div id="cerrarModal">
+                <span>x</span>
+            </div>
+            <h1>Informe del registro</h1>
+            <div id="modal"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footerContenido">
+            <h3>Cursos Online</h3>
+            <P>Los mejores cursos.</br>
+                (+593) 088 888 888</P>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
+        </div>
+        <div class="footerCopy">
+            <p>Diseñado por Karen Castro Demera & Ronny Forty Palma</p>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+<script src="js/registrarCurso.js" ></script>
+</html>

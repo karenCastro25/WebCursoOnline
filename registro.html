@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Cursos Online</title>
+</head>
+<body class="body"> 
+    <div id="contenedorCarga">
+        <div id="carga"></div>
+    </div>
+    <div class="contenedor">
+        <div class="contRegis">
+            <form class="formlogin" id="formregis">
+                <div>
+                    <div style="display: flex;"><a href="login.html"><ion-icon name="arrow-back-outline" size="large"></ion-icon></a></div>
+                    <div><h2 class="titulo">Registro</h2></div>
+                </div>
+                <div class="div2">
+                    <div id="grupoNombre">
+                        <input type="text" class="input" name="nombre" id='nombre' required placeholder="Nombres">
+                        <small class="Error" id="ErrorVnombre">El nombre no debe contener ningun caracter especial y Max.50</small>
+                    </div>
+                    <div id="grupoApellido">
+                        <input type="text" class="input" name="apellido" id="apellido" required placeholder="Apellidos">
+                        <small class="Error" id="ErrorVapellido">El apellido no debe contener ningun caracter especial y Max.150</small>
+                    </div>    
+                </div>
+                <div class="div" id="grupoCorreo">
+                    <input type="email" class="input" name="correo" id="correo" required placeholder="Correo">
+                    <small class="Error" id="ErrorVcorreo">Error de correo</small>
+                </div>
+                <div class="div" id="grupoPassword ">
+                    <input type="password" class="input" name="password" id="password" required placeholder="Contraseña">
+                    
+                    <small class="Error" id="ErrorVpassword">La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula.</small>
+                </div>
+                <button type="submit" class="boton">Registrarse</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+<script src="js/usuarios.js" ></script>
+</html>

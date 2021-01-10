@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Cursos Online</title>
+</head>
+<body class="body">
+    <header class="menu">
+        <h1>Cursos Online</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <div id="contenedorCarga">
+        <div id="carga"></div>
+    </div>
+    <div class="contenedor">
+        <div class="contLogin">
+            <form class="formlogin" id='formIngresar'>
+                <img src="assets/img/user.svg" alt="" class="avatar">
+                <h2 class="titulo">BIENVENIDO</h2>
+                <div class="divlogi">
+                    <ion-icon name="person-outline" size="small"></ion-icon>
+                    <input type="text" class="inputlogi" name="usuario" id="logiCorreo" placeholder="Correo">
+                </div>
+                <div class="divlogi">
+                    <ion-icon name="key-outline" size="small"></ion-icon>
+                    <input type="password" class="inputlogi" name="password" id="logiPassword" placeholder="Contraseña">
+                    <ion-icon name="eye" id="ojo" class="ojito"></ion-icon>
+                </div>
+                <button type="submit" class="boton">Ingresar</button>
+                <p class="regis">¿Aún no tienes una cuenta?<a href="registro.html"> Regístrate ahora</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+<script src="js/usuarios.js" ></script>
+</html>
